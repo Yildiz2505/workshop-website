@@ -1,0 +1,15 @@
+/* Dezelfde headermaatvoering en navigatiestijl als ypkurt.nl */
+.site-header{background:var(--surface);border-bottom:1px solid var(--line)}
+.site-header .container{width:min(1160px,calc(100% - 42px));margin:auto}
+.site-header .header-inner{min-height:78px;display:flex;align-items:center;gap:38px}
+.site-header .logo{display:flex;gap:11px;align-items:center;text-decoration:none;font-size:1.25rem;letter-spacing:-.04em;font-weight:800;white-space:nowrap;color:var(--text)}
+.site-header .logo-icon{display:grid;place-items:center;border-radius:12px;width:39px;height:39px;background:#102634;color:#fff;font-size:1.2rem}
+.site-header .logo-icon span{color:#7fdfbf}
+.site-header .nav{display:flex;gap:23px;margin-left:auto;align-items:center}
+.site-header .nav a{font-size:.9rem;text-decoration:none;color:var(--muted);white-space:nowrap}
+.site-header .nav a:hover,.site-header .nav a.active{color:var(--accent)}
+.site-header .nav a.active{font-weight:700}
+.site-header .theme-button{background:var(--bg);border:1px solid var(--line);padding:7px 12px;border-radius:10px;color:var(--text);white-space:nowrap}
+.site-header a:focus-visible,.site-header button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:900px){.site-header .header-inner{flex-wrap:wrap;gap:9px;padding-block:15px}.site-header .nav{order:3;width:100%;overflow-x:auto;margin:0;gap:19px;padding:5px 0}.site-header .theme-button{margin-left:auto}}
+@media(max-width:640px){.site-header .container{width:calc(100% - 30px)}}
