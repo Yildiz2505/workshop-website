@@ -77,6 +77,15 @@
       "duration": "30–45 minuten",
       "audience": "Volwassenen, makers en projectteams",
       "path": "workshops/projectmatig-werken/kanban-overzicht-creeren-en-houden.md"
+    },
+    {
+      "id": "scrum-begrijpen-zonder-jargon",
+      "category": "projectmatig-werken",
+      "title": "Scrum begrijpen zonder ingewikkeld jargon",
+      "description": "Ontdek hoe je in korte Sprints samenwerkt, feedback gebruikt en een bruikbaar resultaat oplevert.",
+      "duration": "45–60 minuten",
+      "audience": "Volwassenen, makers en projectteams",
+      "path": "workshops/projectmatig-werken/scrum-begrijpen-zonder-jargon.md"
     }
   ]
 }
