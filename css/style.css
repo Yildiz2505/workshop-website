@@ -50,3 +50,26 @@ body.dark{--bg:#111c24;--surface:#1a2a34;--text:#edf7f8;--muted:#a9bdc5;--line:#
 
 /* Harmonisatie met het hoofdportaal */
 .hero a:not(.hero-back){color:#a2e9d8}
+
+/* Volledige breedte onder dezelfde header als ypkurt.nl */
+.workshop-hero{width:100%;background:linear-gradient(145deg,#102634,#1c3944);color:#fff;overflow:hidden;border:0;border-radius:0}
+.workshop-hero-inner{width:min(1160px,calc(100% - 42px));margin:0 auto;min-height:490px;display:grid;grid-template-columns:1.35fr 1fr;align-items:center;gap:48px;padding-block:70px}
+.workshop-eyebrow{color:#8be9d6;text-transform:uppercase;font-size:.74rem;font-weight:800;letter-spacing:.16em;margin:0 0 17px}
+.workshop-hero h1{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.1;letter-spacing:-.055em;margin:0 0 24px;max-width:720px}
+.workshop-hero h1 em{font-style:normal;color:#83ddcf}
+.workshop-hero-copy>p:not(.workshop-eyebrow){max-width:580px;color:#cee0e3;font-size:1.1rem;line-height:1.8}
+.workshop-hero-link{display:inline-flex;margin-top:23px;padding:11px 17px;border:1px solid #719398;border-radius:9px;color:#e8fbfb;text-decoration:none;font-weight:700;font-size:.92rem}
+.workshop-hero-link:hover{border-color:#fff;color:#fff}
+.workshop-hero-art{height:340px;position:relative;display:grid;place-items:center}
+.workshop-orbit{position:absolute;border:1px solid #4d777b;border-radius:50%;aspect-ratio:1}
+.orbit-one{width:320px}.orbit-two{width:225px}
+.workshop-orbit:after{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:#91dfd1;left:12%;top:12%}
+.workshop-core{width:158px;height:158px;border-radius:33px;transform:rotate(-8deg);background:linear-gradient(145deg,#214c57,#315966);border:1px solid #56808a;display:grid;place-items:center;font-size:2.1rem;font-family:ui-monospace,monospace;box-shadow:0 20px 80px #02121b66}
+.workshop-core span{color:#a9f0d4}
+.workshop-art-tag{position:absolute;background:#2a4953;border:1px solid #53767b;padding:5px 14px;border-radius:8px;color:#c5f3e4;font:14px ui-monospace,monospace}
+.workshop-tag-one{top:20px;left:17%}.workshop-tag-two{bottom:14px;left:18%}.workshop-tag-three{top:54%;right:0}
+body:has(#hero-banner:not([hidden])) .layout{padding-top:52px}
+body:has(#hero-banner:not([hidden])) .crumb{display:none}
+@media(max-width:900px){.workshop-hero-inner{grid-template-columns:1fr;gap:10px;padding-block:64px}.workshop-hero-art{display:none}}
+@media(max-width:640px){.workshop-hero-inner{width:calc(100% - 30px);min-height:auto;padding-block:65px}.workshop-hero h1{font-size:2.55rem}.workshop-hero-copy>p:not(.workshop-eyebrow){font-size:1rem}}
+@media print{.workshop-hero{display:none!important}}
