@@ -59,6 +59,15 @@
       "duration": "45–60 minuten",
       "audience": "XAMPP-gebruikers op Windows",
       "path": "workshops/webontwikkeling/php-xampp-bijwerken.md"
+    },
+    {
+      "id": "van-idee-naar-projectplan",
+      "category": "projectmatig-werken",
+      "title": "Van idee naar een helder projectplan",
+      "description": "Van een eerste idee naar een overzichtelijk plan met doel, scope, stappen, afspraken en duidelijke resultaten.",
+      "duration": "45–60 minuten",
+      "audience": "Volwassenen, makers en projectteams",
+      "path": "workshops/projectmatig-werken/van-idee-naar-projectplan.md"
     }
   ]
 }
