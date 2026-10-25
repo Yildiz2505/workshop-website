@@ -16,7 +16,7 @@ function home(category){
   $("#crumb").textContent=c.title;document.title=c.title+" · Workshop Studio";
  }else{
   $("#home").innerHTML='<div class="hero"><p class="eyebrow">YPKURT · WORKSHOP STUDIO</p><h1>Praktische workshops, helder uitgelegd.</h1><p>Ontdek handleidingen die je direct kunt gebruiken. Nieuwe thema’s verschijnen vanzelf zodra er workshops beschikbaar zijn.</p><a class="hero-back" href="https://ypkurt.nl/">← Terug naar YPKurt</a></div><h2>Beschikbare onderwerpen</h2><div id="categories" class="category-grid"></div>';
-  $("#categories").innerHTML=catalog.categories.map(c=>'<a class="category-card" href="'+route("category",c.id)+'"><span class="category-icon" aria-hidden="true">'+safe(c.icon||"📚")+'</span><h3>'+safe(c.title)+'</h3><p>'+safe(c.description)+'</p><div class="meta">'+catalog.workshops.filter(w=>w.category===c.id).length+' workshop(s)</div></a>').join("");
+  $("#categories").innerHTML=publishedCategories().map(c=>'<a class="category-card" href="'+route("category",c.id)+'"><span class="category-icon" aria-hidden="true">'+safe(c.icon||"📚")+'</span><h3>'+safe(c.title)+'</h3><p>'+safe(c.description)+'</p><div class="meta">'+catalog.workshops.filter(w=>w.category===c.id).length+' workshop(s)</div></a>').join("");
   $("#crumb").textContent="";document.title="Workshop Studio · Workshops en handleidingen";
  }
 }
