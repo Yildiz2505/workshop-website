@@ -20,6 +20,12 @@
       "icon": "🌿"
     },
     {
+      "id": "projectmatig-werken",
+      "title": "Projectmatig werken & samenwerken",
+      "description": "Van een goed idee naar een professioneel resultaat: plannen, samenwerken, bouwen en opleveren.",
+      "icon": "🧩"
+    },
+    {
       "id": "smart-technology",
       "title": "Smart Technology",
       "description": "Sensoren, elektronica en slimme toepassingen.",
