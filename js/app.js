@@ -10,16 +10,24 @@ function nav(){
 }
 function home(category){
  const c=publishedCategories().find(x=>x.id===category);
+ $("#hero-banner").hidden=false;
  $("#home").hidden=false;$("#content").hidden=true;$("#print").hidden=true;$("#tocPanel").hidden=true;
  if(c){
-  $("#home").innerHTML='<div class="hero"><a href="index.html">← Alle categorieën</a><h1>'+safe(c.title)+'</h1><p>'+safe(c.description)+'</p></div><h2>Workshops</h2><div class="workshop-list">'+(catalog.workshops.filter(w=>w.category===c.id).map(w=>'<a class="workshop-card" href="'+route("workshop",w.id)+'"><h3>'+safe(w.title)+'</h3><p>'+safe(w.description)+'</p><div class="meta">'+safe(w.duration||"")+'</div></a>').join("")||'<p>Voor dit onderwerp worden nog workshops ontwikkeld.</p>')+'</div>';
+  $("#banner-eyebrow").textContent="YPKURT · WORKSHOP STUDIO";
+  $("#banner-title").textContent=c.title;
+  $("#banner-description").textContent=c.description;
+  $("#home").innerHTML='<h2>Workshops</h2><div class="workshop-list">'+catalog.workshops.filter(w=>w.category===c.id).map(w=>'<a class="workshop-card" href="'+route("workshop",w.id)+'"><h3>'+safe(w.title)+'</h3><p>'+safe(w.description)+'</p><div class="meta">'+safe(w.duration||"")+'</div></a>').join("")+'</div>';
   $("#crumb").textContent=c.title;document.title=c.title+" · Workshop Studio";
  }else{
-  $("#home").innerHTML='<div class="hero"><p class="eyebrow">YPKURT · WORKSHOP STUDIO</p><h1>Praktische workshops, helder uitgelegd.</h1><p>Ontdek handleidingen die je direct kunt gebruiken. Nieuwe thema’s verschijnen vanzelf zodra er workshops beschikbaar zijn.</p><a class="hero-back" href="https://ypkurt.nl/">← Terug naar YPKurt</a></div><h2>Beschikbare onderwerpen</h2><div id="categories" class="category-grid"></div>';
+  $("#banner-eyebrow").textContent="YPKURT · WORKSHOP STUDIO";
+  $("#banner-title").innerHTML='Praktische workshops,<br><em>helder uitgelegd.</em>';
+  $("#banner-description").textContent="Ontdek handleidingen die je direct kunt gebruiken. Nieuwe thema’s verschijnen zodra er workshops beschikbaar zijn.";
+  $("#home").innerHTML='<h2>Beschikbare onderwerpen</h2><div id="categories" class="category-grid"></div>';
   $("#categories").innerHTML=publishedCategories().map(c=>'<a class="category-card" href="'+route("category",c.id)+'"><span class="category-icon" aria-hidden="true">'+safe(c.icon||"📚")+'</span><h3>'+safe(c.title)+'</h3><p>'+safe(c.description)+'</p><div class="meta">'+catalog.workshops.filter(w=>w.category===c.id).length+' workshop(s)</div></a>').join("");
   $("#crumb").textContent="";document.title="Workshop Studio · Workshops en handleidingen";
  }
 }
+
 function enhance(){
  const used=new Map;
  $("#content").querySelectorAll("h2,h3").forEach(h=>{const key=slug(h.textContent)||"onderdeel";const n=used.get(key)||0;used.set(key,n+1);h.id=n?key+"-"+(n+1):key;});
@@ -29,7 +37,7 @@ function enhance(){
 }
 async function workshop(id){
  const w=catalog.workshops.find(x=>x.id===id);if(!w){home();$("#crumb").textContent="Workshop niet gevonden";return}
- $("#home").hidden=true;$("#content").hidden=false;$("#tocPanel").hidden=false;$("#print").hidden=false;$("#content").innerHTML="<h1>Workshop wordt geladen…</h1>";
+ $("#hero-banner").hidden=true;$("#home").hidden=true;$("#content").hidden=false;$("#tocPanel").hidden=false;$("#print").hidden=false;$("#content").innerHTML="<h1>Workshop wordt geladen…</h1>";
  $("#crumb").textContent=(catalog.categories.find(c=>c.id===w.category)?.title||"Workshops")+" / "+w.title;
  try{
   const res=await fetch(w.path,{cache:"no-cache"});if(!res.ok)throw Error("HTTP "+res.status);
