@@ -86,6 +86,51 @@
       "duration": "45–60 minuten",
       "audience": "Volwassenen, makers en projectteams",
       "path": "workshops/projectmatig-werken/scrum-begrijpen-zonder-jargon.md"
+    },
+    {
+      "id": "samenwerken-met-github-projects",
+      "category": "projectmatig-werken",
+      "title": "Samenwerken met GitHub Projects",
+      "description": "Organiseer een gezamenlijk project met GitHub Projects, issues, pull requests, taken en overzichtelijke werkafspraken.",
+      "duration": "60–75 minuten",
+      "audience": "Volwassenen, makers en projectteams",
+      "path": "workshops/projectmatig-werken/samenwerken-met-github-projects.md"
+    },
+    {
+      "id": "professioneel-communiceren-in-projecten",
+      "category": "projectmatig-werken",
+      "title": "Professioneel communiceren in een project",
+      "description": "Maak duidelijke afspraken, deel korte statusupdates, geef feedback en leg besluiten en acties zorgvuldig vast.",
+      "duration": "40–50 minuten",
+      "audience": "Volwassenen, vrijwilligers en projectteams",
+      "path": "workshops/projectmatig-werken/professioneel-communiceren-in-projecten.md"
+    },
+    {
+      "id": "testen-feedback-en-kwaliteit",
+      "category": "projectmatig-werken",
+      "title": "Testen, feedback verwerken en kwaliteit bewaken",
+      "description": "Van acceptatiecriteria en testscenario's tot bruikbare feedback, foutmeldingen en een betrouwbaar resultaat.",
+      "duration": "45–60 minuten",
+      "audience": "Volwassenen, makers en projectteams",
+      "path": "workshops/projectmatig-werken/testen-feedback-en-kwaliteit.md"
+    },
+    {
+      "id": "project-professioneel-opleveren",
+      "category": "projectmatig-werken",
+      "title": "Een project professioneel opleveren",
+      "description": "Rond een project goed af met duidelijke documentatie, een demonstratie, kwaliteitscontrole en bruikbare overdracht.",
+      "duration": "45 minuten",
+      "audience": "Volwassenen, makers en projectteams",
+      "path": "workshops/projectmatig-werken/project-professioneel-opleveren.md"
+    },
+    {
+      "id": "ai-als-projectassistent",
+      "category": "projectmatig-werken",
+      "title": "AI als projectassistent",
+      "description": "Gebruik AI verantwoord voor projectplanning, taken, statusupdates, testscenario's en samenwerking, met menselijke controle.",
+      "duration": "45–60 minuten",
+      "audience": "Volwassenen, makers en projectteams",
+      "path": "workshops/projectmatig-werken/ai-als-projectassistent.md"
     }
   ]
 }
