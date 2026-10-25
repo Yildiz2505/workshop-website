@@ -39,7 +39,7 @@ async function workshop(id){
  }catch(e){$("#content").innerHTML="<h1>Workshop kan niet worden geladen</h1><p>"+safe(e.message)+"</p>";$("#toc").innerHTML=""}
 }
 async function start(){
- $("#theme").addEventListener("click",()=>{document.body.classList.toggle("dark");localStorage.setItem("workshop-theme",document.body.classList.contains("dark")?"dark":"light")});
+ $("#theme-toggle").addEventListener("click",()=>{document.body.classList.toggle("dark");localStorage.setItem("workshop-theme",document.body.classList.contains("dark")?"dark":"light")});
  if(localStorage.getItem("workshop-theme")==="dark")document.body.classList.add("dark");
  $("#print").addEventListener("click",()=>window.print());
  try{
