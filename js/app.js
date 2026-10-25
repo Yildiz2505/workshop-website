@@ -3,18 +3,19 @@ const $=s=>document.querySelector(s);
 const safe=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const slug=v=>v.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 let catalog;
+const publishedCategories=()=>catalog.categories.filter(c=>catalog.workshops.some(w=>w.category===c.id));
 function route(type,id){return type==="workshop"?"?workshop="+encodeURIComponent(id):type==="category"?"?categorie="+encodeURIComponent(id):"index.html"}
 function nav(){
- $("#navigation").innerHTML='<a href="index.html">Alle categorieën</a>'+catalog.categories.map(c=>'<div class="nav-category">'+safe(c.title)+'</div><a href="'+route("category",c.id)+'">Categorie bekijken</a>'+catalog.workshops.filter(w=>w.category===c.id).map(w=>'<a href="'+route("workshop",w.id)+'">'+safe(w.title)+'</a>').join("")).join("");
+ $("#navigation").innerHTML='<a href="index.html">Alle categorieën</a>'+publishedCategories().map(c=>'<div class="nav-category">'+safe(c.title)+'</div><a href="'+route("category",c.id)+'">Categorie bekijken</a>'+catalog.workshops.filter(w=>w.category===c.id).map(w=>'<a href="'+route("workshop",w.id)+'">'+safe(w.title)+'</a>').join("")).join("");
 }
 function home(category){
- const c=catalog.categories.find(x=>x.id===category);
+ const c=publishedCategories().find(x=>x.id===category);
  $("#home").hidden=false;$("#content").hidden=true;$("#print").hidden=true;$("#tocPanel").hidden=true;
  if(c){
   $("#home").innerHTML='<div class="hero"><a href="index.html">← Alle categorieën</a><h1>'+safe(c.title)+'</h1><p>'+safe(c.description)+'</p></div><h2>Workshops</h2><div class="workshop-list">'+(catalog.workshops.filter(w=>w.category===c.id).map(w=>'<a class="workshop-card" href="'+route("workshop",w.id)+'"><h3>'+safe(w.title)+'</h3><p>'+safe(w.description)+'</p><div class="meta">'+safe(w.duration||"")+'</div></a>').join("")||'<p>Voor dit onderwerp worden nog workshops ontwikkeld.</p>')+'</div>';
   $("#crumb").textContent=c.title;document.title=c.title+" · Workshop Studio";
  }else{
-  $("#home").innerHTML='<div class="hero"><p class="eyebrow">LEREN · ONTDEKKEN · TOEPASSEN</p><h1>Ontdek onze workshops</h1><p>Praktische workshops en handleidingen over technologie, AI en digitale vaardigheden. Duidelijk uitgelegd en direct toepasbaar.</p></div><h2>Onderwerpen</h2><div id="categories" class="category-grid"></div>';
+  $("#home").innerHTML='<div class="hero"><p class="eyebrow">YPKURT · WORKSHOP STUDIO</p><h1>Praktische workshops, helder uitgelegd.</h1><p>Ontdek handleidingen die je direct kunt gebruiken. Nieuwe thema’s verschijnen vanzelf zodra er workshops beschikbaar zijn.</p><a class="hero-back" href="https://ypkurt.nl/">← Terug naar YPKurt</a></div><h2>Beschikbare onderwerpen</h2><div id="categories" class="category-grid"></div>';
   $("#categories").innerHTML=catalog.categories.map(c=>'<a class="category-card" href="'+route("category",c.id)+'"><span class="category-icon" aria-hidden="true">'+safe(c.icon||"📚")+'</span><h3>'+safe(c.title)+'</h3><p>'+safe(c.description)+'</p><div class="meta">'+catalog.workshops.filter(w=>w.category===c.id).length+' workshop(s)</div></a>').join("");
   $("#crumb").textContent="";document.title="Workshop Studio · Workshops en handleidingen";
  }
