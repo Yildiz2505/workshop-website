@@ -22,3 +22,28 @@
 .lesson h2,.lesson h3{scroll-margin-top:18px}
 .lesson img{height:auto}
 @media(max-width:700px){.category-grid{grid-template-columns:1fr}.sidebar{max-height:280px;overflow-y:auto}}
+
+/* YPKurt identity, aligned with the portal */
+:root{--bg:#f7f8f8;--surface:#fff;--text:#182733;--muted:#60717b;--line:#dfe7e9;--accent:#0a796e;--soft:#dcf4ee;--code:#102634}
+body.dark{--bg:#111c24;--surface:#1a2a34;--text:#edf7f8;--muted:#a9bdc5;--line:#37505a;--accent:#79dcca;--soft:#27483f;--code:#0e1b25}
+.topbar{min-height:78px;padding:15px clamp(16px,4vw,38px);gap:14px}
+.portal-brand{display:inline-flex;gap:10px;align-items:center;text-decoration:none;color:var(--text);font-size:1.15rem;font-weight:800;white-space:nowrap}
+.portal-mark{width:37px;height:37px;border-radius:11px;display:grid;place-items:center;background:#102634;color:white;font-weight:800}
+.portal-mark span{color:#88e0c6}
+.brand-separator{color:var(--line);font-size:1.5rem}
+.brand{font-size:1.25rem;white-space:nowrap}
+.topbar .topbar-tagline{margin-left:auto}
+.back-link{color:var(--accent);font-weight:700;text-decoration:none;white-space:nowrap;font-size:.88rem}
+.back-link:hover,.hero-back:hover{text-decoration:underline}
+.sidebar-home{font-weight:700;color:var(--accent)!important;margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:13px!important}
+.hero{background:linear-gradient(140deg,#102634,#1c3944);color:white;border:0;padding:clamp(30px,5vw,65px);min-height:290px}
+.hero .eyebrow{color:#8be9d6}
+.hero h1{font-size:clamp(2rem,4vw,3rem);max-width:700px;line-height:1.15}
+.hero p{color:#cee0e3;font-size:1.04rem}
+.hero-back{display:inline-block;color:#a2e9d8;text-decoration:none;font-weight:700;margin-top:14px}
+.category-card,.workshop-card{box-shadow:0 12px 36px rgba(21,49,64,.055);min-height:200px}
+.category-card:hover,.workshop-card:hover{transform:translateY(-2px)}
+.category-card .meta{color:var(--accent);font-weight:600}
+.footer{gap:12px;flex-wrap:wrap}.footer a{color:var(--accent);font-size:.9rem;text-decoration:none}
+@media(max-width:1100px){.topbar-tagline{display:none}}
+@media(max-width:700px){.topbar{flex-wrap:wrap}.back-link{width:100%;margin-left:0}.portal-brand,.brand{font-size:1rem}.brand-separator{font-size:1rem}.hero{min-height:auto}.category-card{min-height:auto}}
