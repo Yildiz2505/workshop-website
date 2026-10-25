@@ -1,0 +1,58 @@
+{
+  "siteTitle": "Workshop Studio",
+  "categories": [
+    {
+      "id": "ai",
+      "title": "AI & ChatGPT",
+      "description": "Slim en verantwoord werken met AI.",
+      "icon": "🤖"
+    },
+    {
+      "id": "programmeren",
+      "title": "Programmeren",
+      "description": "Software en programmeren in de praktijk.",
+      "icon": "💻"
+    },
+    {
+      "id": "github",
+      "title": "Git & GitHub",
+      "description": "Versiebeheer en samenwerken.",
+      "icon": "🌿"
+    },
+    {
+      "id": "smart-technology",
+      "title": "Smart Technology",
+      "description": "Sensoren, elektronica en slimme toepassingen.",
+      "icon": "🔌"
+    },
+    {
+      "id": "3d-printen",
+      "title": "3D-ontwerpen & printen",
+      "description": "Van digitaal ontwerp naar tastbaar object.",
+      "icon": "🧊"
+    },
+    {
+      "id": "webontwikkeling",
+      "title": "Webontwikkeling",
+      "description": "Websites, servers en ontwikkelomgevingen.",
+      "icon": "🌐"
+    },
+    {
+      "id": "digitale-vaardigheden",
+      "title": "Digitale vaardigheden",
+      "description": "Handiger en veiliger digitaal werken.",
+      "icon": "🧰"
+    }
+  ],
+  "workshops": [
+    {
+      "id": "php-xampp-bijwerken",
+      "category": "webontwikkeling",
+      "title": "PHP veilig bijwerken in XAMPP",
+      "description": "PHP binnen XAMPP veilig bijwerken, testen en zo nodig herstellen.",
+      "duration": "45–60 minuten",
+      "audience": "XAMPP-gebruikers op Windows",
+      "path": "workshops/webontwikkeling/php-xampp-bijwerken.md"
+    }
+  ]
+}
