@@ -68,6 +68,15 @@
       "duration": "45–60 minuten",
       "audience": "Volwassenen, makers en projectteams",
       "path": "workshops/projectmatig-werken/van-idee-naar-projectplan.md"
+    },
+    {
+      "id": "kanban-overzicht-creeren-en-houden",
+      "category": "projectmatig-werken",
+      "title": "Kanban – overzicht creëren en houden",
+      "description": "Maak taken zichtbaar, beperk werk dat tegelijk loopt en houd samen grip op de voortgang met een eenvoudig Kanban-bord.",
+      "duration": "30–45 minuten",
+      "audience": "Volwassenen, makers en projectteams",
+      "path": "workshops/projectmatig-werken/kanban-overzicht-creeren-en-houden.md"
     }
   ]
 }
